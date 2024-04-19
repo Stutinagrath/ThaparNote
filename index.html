@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThaparNote</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>ThaparNote</h1>
+        
+        <nav>
+            <a href="#" onclick="addTask()">Tasks</a>
+            <a href="#" onclick="showNotes()">Notes</a>
+            <a href="#" onclick="showReminders()">Reminders</a>
+            <a href="#" onclick="showSchedule()">Schedule</a>
+        </nav>
+
+
+        <section id="tasksSection">
+            <h2>Task Management</h2>
+            <ul id="taskList" class="task-list">
+                <!-- Tasks will be added dynamically using JavaScript -->
+            </ul>
+            <div>
+                <label for="taskInput">Task:</label>
+                <input type="text" id="taskInput" placeholder="Enter task...">
+                <label for="taskDescriptionInput">Description:</label>
+                <input type="text" id="taskDescriptionInput" placeholder="Enter task description...">
+                <label for="taskDeadlineInput">Deadline:</label>
+                <input type="date" id="taskDeadlineInput">
+                <label for="taskPriorityInput">Priority:</label>
+                <select id="taskPriorityInput">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button onclick="addTask()">Add Task</button>
+            </div>
+        </section>
+        
+
+
+
+        <section id="notesSection" style="display: none;">
+            <h2>Note Creation</h2>
+            <textarea id="noteInput" rows="4" placeholder="Enter your note..."></textarea>
+            <button onclick="saveNote()">Save Note</button>
+        </section>
+
+        <section id="remindersSection" style="display: none;">
+            <h2>Reminders</h2>
+            <ul id="reminderList" class="task-list">
+                <!-- Reminders will be added dynamically using JavaScript -->
+            </ul>
+            <div>
+                <label for="reminderInput">Add Reminder:</label>
+                <input type="text" id="reminderInput" placeholder="Enter reminder...">
+                <button onclick="addReminder()">Add Reminder</button>
+            </div>
+        </section>
+
+
+<section id="scheduleSection" style="display: none;">
+    <h2>Academic Calendar</h2>
+    <ul id="scheduleList" class="task-list">
+        <li class="task-item">September 1, 2023 - Semester Begins</li>
+        <li class="task-item">September 15, 2023 - Mid-term Exams</li>
+        <li class="task-item">October 1, 2023 - Holiday: National Day</li>
+        <li class="task-item">November 10, 2023 - End-term Exams Announcement</li>
+        <li class="task-item">November 20-30, 2023 - End-term Exams</li>
+        <li class="task-item">December 1, 2023 - Semester Ends</li>
+        <li class="task-item">December 25, 2023 - January 1, 2024 - Winter Break</li>
+    </ul>
+</section>
+
+
+
+        <footer>
+            <p>&copy; 2023 ThaparNote. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
